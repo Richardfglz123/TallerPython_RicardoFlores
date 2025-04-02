@@ -1,0 +1,34 @@
+{
+  "tabla": [
+    {
+      "id": "123456",
+      "Nombre": "Si",
+      "Edad": 15,
+      "RFC": "FOGGEDFIIOJWR"
+    },
+    {
+      "id": "1234567",
+      "Nombre": "Hola",
+      "Edad": 21,
+      "RFC": "GOGOGOGO"
+    },
+    {
+      "id": "1234568",
+      "Nombre": "Josexo",
+      "Edad": 32,
+      "RFC": "BEAMB"
+    },
+    {
+      "id": "1234569",
+      "Nombre": "Emilaneso",
+      "Edad": 18,
+      "RFC": "SESDBHFBHIURR"
+    },
+    {
+      "id": "123450",
+      "Nombre": "si",
+      "Edad": 50,
+      "RFC": "RWHBR"
+    }
+  ]
+}

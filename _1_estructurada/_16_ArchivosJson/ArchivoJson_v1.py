@@ -1,3 +1,4 @@
+import json
 
 if __name__ == '__main__':
     #Version corta dea brir un archivo Json

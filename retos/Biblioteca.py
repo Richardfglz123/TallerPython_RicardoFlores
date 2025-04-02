@@ -5,16 +5,15 @@ if __name__ == "__main__":
     def agregar_libro(titulo, autor, genero, copias):
         libro = {"titulo": titulo, "autor": autor, "genero": genero, "copias": copias}
         biblioteca.append(libro)
-        print(f"Libro '{titulo}' agregado correctamente.")
+        print(f"Libro '{titulo}' agregado correctamente")
 
     def buscar_libro(filtro, valor):
         resultados = [libro for libro in biblioteca if libro[filtro].lower() == valor.lower()]
         if resultados:
             for libro in resultados:
-                print(
-                    f"Título: {libro['titulo']}, Autor: {libro['autor']}, Género: {libro['genero']}, Copias: {libro['copias']}")
+                print(f"Título: {libro['titulo']}, Autor: {libro['autor']}, Género: {libro['genero']}, Copias: {libro['copias']}")
         else:
-            print("No se encontraron libros que coincidan con la búsqueda.")
+            print("No se encontraron libros que coincidan con la búsqueda")
 
     def prestar_libro(usuario, titulo):
         for libro in biblioteca:
@@ -26,9 +25,9 @@ if __name__ == "__main__":
                     usuarios[usuario].append(titulo)
                     print(f"El libro '{titulo}' se ha prestado a {usuario}.")
                 else:
-                    print("No hay copias disponibles para este libro.")
+                    print("No hay copias disponibles para este libro")
                 return
-        print("El libro no existe en la biblioteca.")
+        print("El libro no existe en la biblioteca")
 
     def devolver_libro(usuario, titulo):
         if usuario in usuarios and titulo in usuarios[usuario]:
@@ -36,16 +35,15 @@ if __name__ == "__main__":
                 if libro["titulo"].lower() == titulo.lower():
                     libro["copias"] += 1
                     usuarios[usuario].remove(titulo)
-                    print(f"El libro '{titulo}' ha sido devuelto por {usuario}.")
+                    print(f"El libro '{titulo}' ha sido devuelto por {usuario}")
                     return
-        print("El usuario no tiene este libro prestado.")
+        print("El usuario no tiene este libro prestado")
 
     def mostrar_libros_disponibles():
-        print("Libros disponibles en la biblioteca:")
+        print("Libros disponibles en la biblioteca: ")
         for libro in biblioteca:
             if libro["copias"] > 0:
-                print(
-                    f"Título: {libro['titulo']}, Autor: {libro['autor']}, Género: {libro['genero']}, Copias: {libro['copias']}")
+                print(f"Título: {libro['titulo']}, Autor: {libro['autor']}, Género: {libro['genero']}, Copias: {libro['copias']}")
 
     def filtrar_libros(filtro, valor):
         for libro in biblioteca:
@@ -54,13 +52,13 @@ if __name__ == "__main__":
 
     def menu():
         while True:
-            print("\n--- Sistema de Gestión de Biblioteca ---")
-            print("1. Agregar libro")
-            print("2. Buscar libro")
-            print("3. Prestar libro")
-            print("4. Devolver libro")
-            print("5. Mostrar libros disponibles")
-            print("6. Salir")
+            print("Sistema de Gestión de Biblioteca")
+            print("1 Agregar libro")
+            print("2 Buscar libro")
+            print("3 Prestar libro")
+            print("4 Devolver libro")
+            print("5 Mostrar libros disponibles")
+            print("6 Salir")
 
             opcion = input("Selecciona una opción: ")
 
@@ -92,9 +90,9 @@ if __name__ == "__main__":
                 mostrar_libros_disponibles()
 
             elif opcion == "6":
-                print("¡Gracias por utilizar el sistema de biblioteca!")
+                print("Gracias por utilizar el sistema de bibliotec")
                 break
 
             else:
-                print("Opción no válida. Intenta de nuevo.")
+                print("Opción no válida. Intenta de nuevo")
     menu()
